@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ecommerce-product-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/ecommerce_catalog
+      # For Azure Cosmos DB (Mongo API) / Atlas, replace with the full connection string, e.g.:
+      # uri: mongodb+srv://<user>:<password>@<cluster>/ecommerce_catalog?retryWrites=true&w=majority
+
+de:
+  flapdoodle:
+    mongodb:
+      embedded:
+        version: 7.0.4
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    com.nisum.ecommerce: INFO
+    org.springframework.data.mongodb: WARN
