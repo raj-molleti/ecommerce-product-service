@@ -6,7 +6,8 @@ spring:
     name: ecommerce-product-service
   data:
     mongodb:
-      uri: mongodb://localhost:27017/ecommerce_catalog
+      uri: mongodb+srv://rajlleti_db_user:zUBetZPnzSJS8G9n@cluster0.vawxom3.mongodb.net/ecommerce_catalog?appName=Cluster0
+      #uri: mongodb://localhost:27017/ecommerce_catalog
       # For Azure Cosmos DB (Mongo API) / Atlas, replace with the full connection string, e.g.:
       # uri: mongodb+srv://<user>:<password>@<cluster>/ecommerce_catalog?retryWrites=true&w=majority
 
